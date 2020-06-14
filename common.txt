@@ -1,0 +1,38 @@
+<script type="text/javascript">
+var scroll = 0;
+window.onscroll = function(){
+if( scroll != 1 ){
+    scroll = 1;
+    var o = document.createElement("img");
+    o.src = "https://{domain}/click.php?event6=1";
+    }
+}
+</script>
+
+<script>
+function pushToTrackerViaImage(){
+    var pushURL = 'https://{domain}/click.php?event7=1';
+    var img = document.createElement('img');
+    img.src=pushURL;
+    img.style.display='none';
+    document.body.appendChild( img );
+}
+function pushAfterTimeout(timeout){
+    setTimeout(pushToTrackerViaImage, timeout*1000);
+}
+var TIMEOUT_IN_SECONDS = 30;
+pushAfterTimeout(TIMEOUT_IN_SECONDS);
+</script>
+
+<script>
+    if (typeof(window.orientation)=="undefined")
+    {
+        var o = document.createElement("img");
+        o.src='https://{domain}/click.php?event8=0';
+    }
+    else
+    {
+        var o = document.createElement("img");
+        o.src='https://{domain}/click.php?event8=1';
+    }
+</script>

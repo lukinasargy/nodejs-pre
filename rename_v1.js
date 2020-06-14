@@ -4,7 +4,7 @@ if (!fs.existsSync('./assets/img')) {
 	};
 fs.readdir('./assets', (err, files) => {
 	files.forEach((file, index) => {
-		if (file.endsWith('jpg') || file.endsWith('png') || file.endsWith('svg')) {
+		if (file.endsWith('jpeg') ||file.endsWith('jpg') || file.endsWith('png') || file.endsWith('svg') || file.endsWith('gif') || file.endsWith('webp')) {
 			fs.rename('./assets/' + file, './assets/img/' + file, (err) => {
 				if (err) throw err;
 				console.log('rename completed');
