@@ -30,12 +30,12 @@ function renameFiles() {
   fs.readdir('./', (err, files) => {
     files.forEach((file, index) => {
       if (file.endsWith('html')) {
-        fs.rename(path.basename(file), 'index.html', (err) => {
+        fs.renameSync(path.basename(file), 'index.html', (err) => {
           if (err) throw err;
           console.log('rename html');
         })
       } else if (fs.lstatSync(path.basename(file)).isDirectory()) {
-        fs.rename(path.basename(file), './assets', (err) => {
+        fs.renameSync(path.basename(file), './assets', (err) => {
           if (err) throw err;
           console.log('rename dir');
 
