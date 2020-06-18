@@ -47,6 +47,6 @@ function renameFiles() {
   })
 })(renameFiles);
 
-//if (!fs.existsSync('./assets')) {
-//  fs.mkdirSync('./assets');
-//};
+fs.unlinkSync('./rename.js');
+console.log('rename file deleted');
+process.exit();
