@@ -1,13 +1,23 @@
 const fs = require('fs');
 const path = require('path');
 
-function renameFiles() {
+function fileDelete() {
+  fs.unlinkSync('./rename.js');
+  console.log('rename file deleted');
+  process.exit();
+}
+
+function renameFiles(callback) {
   if (fs.existsSync('./assets')) {
     if (!fs.existsSync('./assets/img')) {
       fs.mkdirSync('./assets/img');
     };
-    fs.readdirSync('./assets', (err, files) => {
+    fs.readdir('./assets', (err, files) => {
       files.forEach((file, index) => {
+        console.log(index);
+        if (index + 1 === files.length) {
+          callback();
+        }
         if (file.endsWith('jpeg') || file.endsWith('jpg') || file.endsWith('png') || file.endsWith('svg') || file.endsWith('gif') || file.endsWith('webp')) {
           fs.rename('./assets/' + file, './assets/img/' + file, (err) => {
             if (err) throw err;
@@ -21,13 +31,9 @@ function renameFiles() {
             if (err) throw err;
             console.log('rename completed');
           });
-        };
+        }
       });
     });
-    
-fs.unlinkSync('./rename.js');
-console.log('rename file deleted');
-process.exit();
   }
 };
 (function renameDirectory(callback) {
@@ -46,8 +52,7 @@ process.exit();
         })
       }
     });
-    callback();
+    callback(fileDelete);
     if (err) throw err;
   })
 })(renameFiles);
-
